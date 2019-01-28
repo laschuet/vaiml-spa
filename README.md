@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laschuet/vaiml-spa/blob/master/LICENSE.txt)
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
-vaiml-spa.
+Visual analytics for interpretable machine learning - Single page application.
 
 ## Requirements
 
