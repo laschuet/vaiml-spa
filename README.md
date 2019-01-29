@@ -38,12 +38,12 @@ npm run lint-fix
 Lint the code including fixes.
 
 ```
-npm run prettify
+npm run prettier
 ```
 Run prettier.
 
 ```
-npm run prettify-fix
+npm run prettier-fix
 ```
 Run prettier including fixes.
 
