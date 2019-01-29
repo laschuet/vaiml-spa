@@ -10,8 +10,8 @@
     "dist": "node dist.js",
     "lint": "eslint --ext .jsx --ext .js .",
     "lint-fix": "eslint --fix --ext .jsx --ext .js .",
-    "prettify": "prettier --single-quote --trailing-comma all \"src/**/*.{js,jsx}\"",
-    "prettify-fix": "prettier --single-quote --trailing-comma all --write \"src/**/*.{js,jsx}\""
+    "prettier": "prettier --single-quote --trailing-comma all \"src/**/*.{js,jsx}\"",
+    "prettier-fix": "prettier --single-quote --trailing-comma all --write \"src/**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",
