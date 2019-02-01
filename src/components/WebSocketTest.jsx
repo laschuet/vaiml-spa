@@ -7,7 +7,7 @@ setConfig({ pureSFC: true });
 
 const WebSocketTest = () => {
   const [input, setInput] = useState('');
-  const [message, sendMessage] = useWebSocket('ws://127.0.0.1:8085');
+  const [message, sendMessage] = useWebSocket('ws://127.0.0.1:4020');
 
   const handleChange = evt => {
     setInput(evt.target.value);
