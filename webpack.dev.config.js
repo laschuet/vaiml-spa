@@ -21,24 +21,14 @@ const config = {
     publicPath: '/dev/',
   },
   resolve: {
-    extensions: ['.css', '.js', '.jsx'],
+    extensions: ['.css', '.js', '.jsx', '.scss'],
     modules: [paths.source, paths.nodeModules],
   },
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              camelCase: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              modules: true,
-            },
-          },
-        ],
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.jsx?$/,

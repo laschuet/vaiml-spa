@@ -1,6 +1,7 @@
 import '@babel/polyfill';
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
+import 'primer/index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';

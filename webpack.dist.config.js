@@ -20,24 +20,14 @@ const config = {
     path: paths.dist,
   },
   resolve: {
-    extensions: ['.css', '.js', '.jsx'],
+    extensions: ['.css', '.js', '.jsx', '.scss'],
     modules: [paths.source, paths.nodeModules],
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              camelCase: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              modules: true,
-            },
-          },
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.jsx?$/,
