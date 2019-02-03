@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Contribution = props => (
-  <div>
-    <div>
+  <div className="Box Box--condensed mb-2">
+    <div className="Box-header">
       {props.author} &middot; {props.timestamp} &middot; #{props.id}
     </div>
-    <div>{props.children}</div>
+    <div className="Box-footer">{props.children}</div>
   </div>
 );
 

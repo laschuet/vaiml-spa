@@ -11,23 +11,24 @@ const Application = () => {
   );
 
   return (
-    <div>
-      <WebSocketTest />
-      <br />
+    <div className="d-flex">
       {hasError && <div>Oops! An error occured...</div>}
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        contributions.map(contribution => (
-          <Contribution
-            key={contribution.id}
-            id={contribution.id}
-            author={contribution.author}
-            timestamp={contribution.timestamp}>
-            {contribution.text}
-          </Contribution>
-        ))
+        <div className="d-flex flex-column">
+          {contributions.map(contribution => (
+            <Contribution
+              key={contribution.id}
+              id={contribution.id}
+              author={contribution.author}
+              timestamp={contribution.timestamp}>
+              {contribution.text}
+            </Contribution>
+          ))}
+        </div>
       )}
+      <WebSocketTest />
     </div>
   );
 };
