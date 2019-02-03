@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 
 import AnalyticsPage from './AnalyticsPage';
 import HomePage from './HomePage';
@@ -8,11 +8,17 @@ import TestPage from './TestPage';
 const Application = () => {
   return (
     <Router>
-      <div className="d-flex">
+      <div>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/analytics">Analytics</Link>
-          <Link to="/tests">Tests</Link>
+          <NavLink to="/" exact activeClassName="selected">
+            Home
+          </NavLink>
+          <NavLink to="/analytics" activeClassName="selected">
+            Analytics
+          </NavLink>
+          <NavLink to="/tests" activeClassName="selected">
+            Tests
+          </NavLink>
         </nav>
         <div>
           <Route path="/" exact component={HomePage} />
