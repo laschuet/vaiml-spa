@@ -11,6 +11,7 @@ import thunk from 'redux-thunk';
 
 import Application from './components/Application';
 import createRootReducer from './reducers/index';
+import './stylesheets/octicons.scss';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const history = createBrowserHistory();

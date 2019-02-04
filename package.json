@@ -61,6 +61,7 @@
     "humps": "^2.0.1",
     "lodash-es": "^4.17.11",
     "normalizr": "^3.3.0",
+    "octicons": "0.0.0-882a0ed25",
     "primer": "^11.0.0",
     "prop-types": "^15.6.2",
     "query-string": "^6.2.0",

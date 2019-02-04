@@ -3,6 +3,7 @@ import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 
 import AnalyticsPage from './AnalyticsPage';
 import HomePage from './HomePage';
+import Octicon from './Octicon';
 import TestPage from './TestPage';
 
 const Application = () => {
@@ -10,7 +11,9 @@ const Application = () => {
     <Router>
       <Fragment>
         <header className="d-flex px-2 py-3 bg-gray-dark text-white">
-          <div className="mr-4">VAIML</div>
+          <div className="mr-4">
+            <Octicon name="globe" />
+          </div>
           <nav>
             <ul className="d-flex list-style-none text-bold">
               <li>
