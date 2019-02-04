@@ -4,7 +4,7 @@ import React from 'react';
 import Contribution from './Contribution';
 
 const ContributionList = props => (
-  <div className="d-flex flex-column">
+  <div>
     {props.contributions.map(contribution => (
       <Contribution
         key={contribution.id}

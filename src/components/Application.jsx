@@ -3,36 +3,24 @@ import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 
 import AnalyticsPage from './AnalyticsPage';
 import HomePage from './HomePage';
-import Octicon from './Octicon';
 import TestPage from './TestPage';
 
 const Application = () => {
   return (
     <Router>
       <Fragment>
-        <header className="d-flex px-2 py-3 bg-gray-dark text-white">
-          <div className="mr-4">
-            <Octicon name="globe" />
-          </div>
-          <nav>
-            <ul className="d-flex list-style-none text-bold">
-              <li>
-                <NavLink className="text-white pr-2" to="/" exact>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="text-white pr-2" to="/analytics">
-                  Analytics
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="text-white" to="/tests">
-                  Tests
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
+        <header className="navbar p-2 bg-dark">
+          <section className="navbar-section">
+            <NavLink className="pr-2 text-light" to="/" exact>
+              VAIML
+            </NavLink>
+            <NavLink className="pr-2 text-light" to="/analytics">
+              Analytics
+            </NavLink>
+            <NavLink className="text-light" to="/tests">
+              Tests
+            </NavLink>
+          </section>
         </header>
         <div className="px-2">
           <Route path="/" exact component={HomePage} />

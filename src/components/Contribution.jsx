@@ -2,11 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Contribution = props => (
-  <div className="Box Box--condensed mb-2">
-    <div className="Box-header">
-      {props.author} &middot; {props.timestamp} &middot; #{props.id}
+  <div className="card">
+    <div className="card-header">
+      <div className="card-subtitle text-gray">
+        {props.author} &middot; {props.timestamp} &middot; #{props.id}
+      </div>
     </div>
-    <div className="Box-footer">{props.children}</div>
+    <div className="card-body">{props.children}</div>
   </div>
 );
 

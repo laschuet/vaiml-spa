@@ -1,7 +1,6 @@
 import '@babel/polyfill';
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
-import 'primer/index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -11,7 +10,7 @@ import thunk from 'redux-thunk';
 
 import Application from './components/Application';
 import createRootReducer from './reducers/index';
-import './stylesheets/octicons.scss';
+import './stylesheets/application';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const history = createBrowserHistory();
