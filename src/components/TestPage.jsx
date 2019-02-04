@@ -4,6 +4,7 @@ import WebSocketTest from './WebSocketTest';
 
 const TestPage = () => (
   <Fragment>
+    <h1>Tests</h1>
     <WebSocketTest />
   </Fragment>
 );

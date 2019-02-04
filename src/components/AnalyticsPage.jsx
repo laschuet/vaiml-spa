@@ -11,7 +11,7 @@ const AnalyticsPage = () => {
 
   return (
     <Fragment>
-      <div>Analytics</div>
+      <h1>Analytics</h1>
       {hasError && <div>Oops! An error occured...</div>}
       {isLoading ? (
         <div>Loading...</div>
