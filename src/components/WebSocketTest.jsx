@@ -23,18 +23,23 @@ const WebSocketTest = () => {
       <div>WebSocketTest</div>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="input">
-            Message:
-            <br />
+          <div className="form-group">
+            <label className="form-label" htmlFor="input">
+              Message
+            </label>
             <input
+              className="form-input"
               id="input"
               type="text"
               value={input}
               onChange={handleChange}
             />
-          </label>
-          &nbsp;
-          <input type="submit" value="Send" />
+          </div>
+          <input
+            className="form-input btn btn-primary"
+            type="submit"
+            value="Send"
+          />
         </form>
       </div>
       <div>
