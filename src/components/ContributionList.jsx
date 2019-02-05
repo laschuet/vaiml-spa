@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Contribution from './Contribution';
 
 const ContributionList = props => (
-  <div>
+  <Fragment>
     {props.contributions.map(contribution => (
       <Contribution
         key={contribution.id}
@@ -14,7 +14,7 @@ const ContributionList = props => (
         {contribution.text}
       </Contribution>
     ))}
-  </div>
+  </Fragment>
 );
 
 ContributionList.propTypes = {

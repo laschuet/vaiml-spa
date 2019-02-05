@@ -16,7 +16,11 @@ const AnalyticsPage = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <ContributionList contributions={contributions} />
+        <div className="columns">
+          <div className="column col-6">
+            <ContributionList contributions={contributions} />
+          </div>
+        </div>
       )}
     </Fragment>
   );

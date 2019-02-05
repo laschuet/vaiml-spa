@@ -11,10 +11,10 @@ const Application = () => {
       <Fragment>
         <header className="navbar p-2 bg-dark">
           <section className="navbar-section">
-            <NavLink className="pr-2 text-light" to="/" exact>
+            <NavLink className="mr-2 text-light" to="/" exact>
               VAIML
             </NavLink>
-            <NavLink className="pr-2 text-light" to="/analytics">
+            <NavLink className="mr-2 text-light" to="/analytics">
               Analytics
             </NavLink>
             <NavLink className="text-light" to="/tests">
@@ -22,7 +22,7 @@ const Application = () => {
             </NavLink>
           </section>
         </header>
-        <div className="px-2">
+        <div className="p-2">
           <Route path="/" exact component={HomePage} />
           <Route path="/analytics" component={AnalyticsPage} />
           <Route path="/tests" component={TestPage} />
