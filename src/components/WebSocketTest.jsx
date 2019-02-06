@@ -16,6 +16,7 @@ const WebSocketTest = () => {
   const handleSubmit = evt => {
     evt.preventDefault();
     sendMessage(input);
+    setInput('');
   };
 
   return (
