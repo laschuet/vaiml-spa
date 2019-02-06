@@ -19,33 +19,29 @@ const WebSocketTest = () => {
   };
 
   return (
-    <div>
-      <div>WebSocketTest</div>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label className="form-label" htmlFor="input">
-              Message
-            </label>
+    <div className="panel">
+      <div className="panel-header">
+        <div className="panel-title text-bold">Last message from server</div>
+      </div>
+      <div className="panel-body">{message}</div>
+      <div className="panel-footer">
+        <form>
+          <div className="input-group">
             <input
               className="form-input"
               id="input"
               type="text"
               value={input}
               onChange={handleChange}
+              placeholder="Message"
             />
+            <button
+              className="btn btn-primary input-group-btn"
+              onClick={handleSubmit}>
+              Send
+            </button>
           </div>
-          <input
-            className="form-input btn btn-primary"
-            type="submit"
-            value="Send"
-          />
         </form>
-      </div>
-      <div>
-        Last received message:
-        <br />
-        {message}
       </div>
     </div>
   );
