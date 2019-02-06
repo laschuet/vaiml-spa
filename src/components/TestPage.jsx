@@ -5,7 +5,11 @@ import WebSocketTest from './WebSocketTest';
 const TestPage = () => (
   <Fragment>
     <h1>Tests</h1>
-    <WebSocketTest />
+    <div className="columns">
+      <div className="column col-4">
+        <WebSocketTest />
+      </div>
+    </div>
   </Fragment>
 );
 
