@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 export const useWebSocket = address => {
-  const [message, setMessage] = useState('<EMPTY>');
+  const [message, setMessage] = useState({});
   const wsRef = useRef();
 
   const handleClose = () => {};
@@ -11,7 +11,7 @@ export const useWebSocket = address => {
   };
 
   const handleMessage = evt => {
-    setMessage(evt.data);
+    setMessage(JSON.parse(evt.data));
   };
 
   const handleOpen = () => {};
