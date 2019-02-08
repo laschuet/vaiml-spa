@@ -22,9 +22,12 @@ const WebSocketTest = () => {
   return (
     <div className="panel">
       <div className="panel-header">
-        <div className="panel-title text-bold">Last message from server</div>
+        <div className="panel-title text-bold">WebSocketTest</div>
       </div>
-      <div className="panel-body">{JSON.stringify(message)}</div>
+      <div className="panel-body">
+        <div>Last message from server:</div>
+        <div>{JSON.stringify(message)}</div>
+      </div>
       <div className="panel-footer">
         <form>
           <div className="input-group">
