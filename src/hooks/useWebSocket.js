@@ -7,7 +7,9 @@ export const useWebSocket = address => {
   const handleClose = () => {};
 
   const handleError = evt => {
-    setMessage(evt.data);
+    setMessage({
+      data: `WebSocket error ${evt.data}`,
+    });
   };
 
   const handleMessage = evt => {
