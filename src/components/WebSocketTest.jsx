@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { setConfig } from 'react-hot-loader';
 
 import { useWebSocket } from '../hooks/useWebSocket';
-
-setConfig({ pureSFC: true });
 
 const WebSocketTest = () => {
   const [input, setInput] = useState('');
