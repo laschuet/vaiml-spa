@@ -18,10 +18,6 @@ export const useWebSocket = address => {
 
   const handleOpen = () => {};
 
-  const sendMessage = text => {
-    wsRef.current.send(text);
-  };
-
   useEffect(() => {
     const ws = new WebSocket(address);
     ws.addEventListener('close', handleClose);
@@ -39,6 +35,10 @@ export const useWebSocket = address => {
       ws.close();
     };
   }, []);
+
+  const sendMessage = text => {
+    wsRef.current.send(text);
+  };
 
   return [message, sendMessage];
 };
