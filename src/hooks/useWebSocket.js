@@ -1,19 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 
 export const useWebSocket = address => {
-  const [message, setMessage] = useState({});
+  const [message, setMessage] = useState('');
   const wsRef = useRef();
 
   const handleClose = () => {};
 
   const handleError = evt => {
-    setMessage({
-      data: `WebSocket error ${evt.data}`,
-    });
+    setMessage(`WebSocket error ${evt.data}`);
   };
 
   const handleMessage = evt => {
-    setMessage(JSON.parse(evt.data));
+    setMessage(evt.data);
   };
 
   const handleOpen = () => {};
