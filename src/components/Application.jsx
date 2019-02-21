@@ -14,6 +14,7 @@ const Application = () => {
           <section>
             <NavLink className="mr-2 text-white" to="/" exact>
               <Octicon icon={Smiley} />
+              <span className="ml-2">VAIML</span>
             </NavLink>
             <NavLink className="mr-2 text-white" to="/analytics">
               Analytics
