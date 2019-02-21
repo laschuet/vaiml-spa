@@ -17,30 +17,30 @@ const WebSocketTest = () => {
   };
 
   return (
-    <div className="panel">
-      <div className="panel-header">
-        <div className="panel-title text-bold">WebSocketTest</div>
+    <div className="Box Box--condensed">
+      <div className="Box-header">
+        <div className="Box-title">WebSocketTest</div>
       </div>
-      <div className="panel-body">
+      <div className="Box-body">
         <div>Last message from server:</div>
         <div>{message}</div>
       </div>
-      <div className="panel-footer">
+      <div className="Box-footer">
         <form>
           <div className="input-group">
             <input
-              className="form-input"
+              className="form-control"
               id="input"
               type="text"
               value={input}
               onChange={handleChange}
               placeholder="Message"
             />
-            <button
-              className="btn btn-primary input-group-btn"
-              onClick={handleSubmit}>
-              Send
-            </button>
+            <span className="input-group-button">
+              <button className="btn btn-primary" onClick={handleSubmit}>
+                Send
+              </button>
+            </span>
           </div>
         </form>
       </div>

@@ -16,8 +16,8 @@ const AnalyticsPage = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div className="columns">
-          <div className="column col-6">
+        <div className="clearfix gutter-condensed">
+          <div className="col-6 float-left">
             <ContributionList contributions={contributions} />
           </div>
         </div>

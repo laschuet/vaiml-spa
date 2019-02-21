@@ -2,17 +2,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Contribution = props => (
-  <div className="card mb-2">
-    <div className="card-header">
-      <button className="btn btn-link btn-sm float-right">Do 3</button>
-      <div className="card-subtitle text-gray">
+  <div className="Box Box--condensed mb-2">
+    <div className="Box-header clearfix">
+      <div className="float-left">
         {props.author} &middot; {props.timestamp} &middot; #{props.id}
       </div>
+      <button className="btn btn-link btn-sm float-right">Do 3</button>
     </div>
-    <div className="card-body">{props.children}</div>
-    <div className="card-footer">
-      <button className="btn btn-primary btn-sm">Do 1</button>{' '}
-      <button className="btn btn-sm">Do 2</button>
+    <div className="Box-body">
+      <div className="mb-2">{props.children}</div>
+      <div>
+        <button className="btn btn-primary btn-sm">Do 1</button>{' '}
+        <button className="btn btn-sm">Do 2</button>
+      </div>
     </div>
   </div>
 );

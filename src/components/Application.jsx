@@ -1,3 +1,4 @@
+import Octicon, { Smiley } from '@githubprimer/octicons-react';
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 
@@ -9,15 +10,15 @@ const Application = () => {
   return (
     <Router>
       <Fragment>
-        <header className="navbar p-2 bg-dark">
-          <section className="navbar-section">
-            <NavLink className="mr-2 text-light" to="/" exact>
-              VAIML
+        <header className="p-2 bg-gray-dark">
+          <section>
+            <NavLink className="mr-2 text-white" to="/" exact>
+              <Octicon icon={Smiley} />
             </NavLink>
-            <NavLink className="mr-2 text-light" to="/analytics">
+            <NavLink className="mr-2 text-white" to="/analytics">
               Analytics
             </NavLink>
-            <NavLink className="text-light" to="/tests">
+            <NavLink className="text-white" to="/tests">
               Tests
             </NavLink>
           </section>

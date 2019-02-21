@@ -6,11 +6,11 @@ import WebSocketTest from './WebSocketTest';
 const TestPage = () => (
   <Fragment>
     <h1>Tests</h1>
-    <div className="columns">
-      <div className="column col-4">
+    <div className="clearfix gutter-condensed">
+      <div className="col-4 float-left">
         <WebSocketTest />
       </div>
-      <div className="column col-4">
+      <div className="col-4 float-left">
         <ChildProcessTest />
       </div>
     </div>
