@@ -1,4 +1,5 @@
 import axios from 'axios';
+import camelcaseKeys from 'camelcase-keys';
 import { useEffect, useState } from 'react';
 
 export const useRest = (initialUrl, initialData) => {
@@ -13,7 +14,7 @@ export const useRest = (initialUrl, initialData) => {
 
     try {
       const result = await axios(url);
-      setData(result.data);
+      setData(camelcaseKeys(result.data));
     } catch (error) {
       setHasError(true);
     }
