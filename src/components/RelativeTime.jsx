@@ -28,7 +28,9 @@ const relativeTime = timestamp => {
 };
 
 const RelativeTime = props => (
-  <span title={props.datetime}>{relativeTime(props.datetime)}</span>
+  <span title={new Date(props.datetime).toUTCString()}>
+    {relativeTime(props.datetime)}
+  </span>
 );
 
 RelativeTime.propTypes = {
