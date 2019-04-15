@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import '../stylesheets/contribution';
+
 const Contribution = props => (
   <div className="Box Box--condensed mb-2">
     <div className="Box-header clearfix">
@@ -10,7 +12,7 @@ const Contribution = props => (
       <button className="btn btn-link btn-sm float-right">Do 3</button>
     </div>
     <div className="Box-body">
-      <div className="mb-2">{props.children}</div>
+      <div className="mb-2 content">{props.children}</div>
       <div>
         <button className="btn btn-primary btn-sm">Do 1</button>{' '}
         <button className="btn btn-sm">Do 2</button>
