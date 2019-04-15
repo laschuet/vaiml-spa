@@ -23,11 +23,13 @@ const relativeTime = timestamp => {
   const year =
     datetime.getFullYear() === now.getFullYear()
       ? ''
-      : ', ' + datetime.getFullYear();
-  return month + ' ' + day + year;
+      : ' ' + datetime.getFullYear();
+  return day + ' ' + month + year;
 };
 
-const RelativeTime = props => <span>{relativeTime(props.datetime)}</span>;
+const RelativeTime = props => (
+  <span title={props.datetime}>{relativeTime(props.datetime)}</span>
+);
 
 RelativeTime.propTypes = {
   datetime: PropTypes.string.isRequired,
