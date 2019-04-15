@@ -8,10 +8,17 @@ const ContributionList = props => (
     {props.contributions.map(contribution => (
       <Contribution
         key={contribution.id}
-        id={contribution.id}
+        assessmentContent={contribution.assessmentContent}
+        assessmentDecision={contribution.assessmentDecision}
         author={contribution.author}
-        timestamp={contribution.timestamp}>
-        {contribution.text}
+        createdAt={contribution.createdAt}
+        id={contribution.id}
+        modifiedAt={contribution.modifiedAt}
+        negRatings={contribution.negRatings}
+        number={contribution.number}
+        posRatings={contribution.posRatings}
+        reference={contribution.ref}>
+        {contribution.content}
       </Contribution>
     ))}
   </Fragment>
