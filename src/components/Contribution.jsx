@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import RelativeTime from './RelativeTime';
+
 import '../stylesheets/contribution';
 
 const Contribution = props => (
   <div className="Box Box--condensed mb-2">
     <div className="Box-header clearfix">
       <div className="float-left">
-        {props.author} &middot; {props.createdAt} &middot; #{props.id}
+        <span className="text-emphasized">{props.author}</span> &middot;{' '}
+        <RelativeTime datetime={props.createdAt} />
       </div>
       <button className="btn btn-link btn-sm float-right">Do 3</button>
     </div>
