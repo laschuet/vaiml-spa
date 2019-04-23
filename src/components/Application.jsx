@@ -4,6 +4,7 @@ import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 
 import AnalyticsPage from './AnalyticsPage';
 import HomePage from './HomePage';
+import SettingsPage from './SettingsPage';
 import TestPage from './TestPage';
 
 const Application = () => {
@@ -19,6 +20,9 @@ const Application = () => {
             <NavLink className="mr-2 text-white" to="/analytics">
               Analytics
             </NavLink>
+            <NavLink className="mr-2 text-white" to="/settings">
+              Settings
+            </NavLink>
             <NavLink className="text-white" to="/tests">
               Tests
             </NavLink>
@@ -27,6 +31,7 @@ const Application = () => {
         <div className="p-2">
           <Route path="/" exact component={HomePage} />
           <Route path="/analytics" component={AnalyticsPage} />
+          <Route path="/settings" component={SettingsPage} />
           <Route path="/tests" component={TestPage} />
         </div>
       </Fragment>
