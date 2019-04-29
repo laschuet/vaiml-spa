@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React from 'react';
+
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const DatasetSettings = props => {
-  const [dataset, setDataset] = useState('');
+  const [dataset, setDataset] = useLocalStorage(
+    'vaiml:settings:dataset',
+    props.datasets[0],
+  );
 
   const handleChange = evt => {
     setDataset(evt.target.value);
