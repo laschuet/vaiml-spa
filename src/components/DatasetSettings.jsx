@@ -6,7 +6,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 const DatasetSettings = props => {
   const [datasetName, setDatasetName] = useLocalStorage(
     'vaiml:settings:dataset:name',
-    props.datasets[0],
+    '',
   );
 
   const handleChange = evt => {
