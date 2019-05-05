@@ -6,7 +6,7 @@ import ContributionList from './ContributionList';
 
 const AnalyticsPage = () => {
   const [datasetName] = useLocalStorage('vaiml:settings:dataset:name');
-  const { data: contributions, hasError, isLoading, fetch } = useRest(
+  const { data: contributions, hasError, isLoading } = useRest(
     `http://localhost:4010/datasets/${datasetName}/contributions`,
     [],
   );
