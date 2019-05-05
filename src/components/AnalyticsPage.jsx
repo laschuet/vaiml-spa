@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react';
 
+import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useRest } from '../hooks/useRest';
 import ContributionList from './ContributionList';
 
 const AnalyticsPage = () => {
+  const [datasetName, setDatasetName] = useLocalStorage(
+    'vaiml:settings:dataset:name',
+  );
   const { data: contributions, hasError, isLoading, fetch } = useRest(
-    'http://localhost:4010/contributions',
+    `http://localhost:4010/datasets/${datasetName}/contributions`,
     [],
   );
 

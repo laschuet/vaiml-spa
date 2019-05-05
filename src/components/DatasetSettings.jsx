@@ -4,13 +4,13 @@ import React from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const DatasetSettings = props => {
-  const [dataset, setDataset] = useLocalStorage(
-    'vaiml:settings:dataset',
+  const [datasetName, setDatasetName] = useLocalStorage(
+    'vaiml:settings:dataset:name',
     props.datasets[0],
   );
 
   const handleChange = evt => {
-    setDataset(evt.target.value);
+    setDatasetName(evt.target.value);
   };
 
   return (
@@ -26,11 +26,11 @@ const DatasetSettings = props => {
             aria-label="Dataset"
             onBlur={handleChange}
             onChange={handleChange}
-            value={dataset}>
-            {props.datasets.map(ds => {
+            value={datasetName}>
+            {props.datasets.map(dataset => {
               return (
-                <option key={ds.id} value={ds.name}>
-                  {ds.name}
+                <option key={dataset.id} value={dataset.name}>
+                  {dataset.name}
                 </option>
               );
             })}
