@@ -11,21 +11,21 @@ const ContributionList = props => (
         assessmentContent={contribution.assessmentContent}
         assessmentDecision={contribution.assessmentDecision}
         author={contribution.author}
+        content={contribution.content}
         createdAt={contribution.createdAt}
         id={contribution.id}
         modifiedAt={contribution.modifiedAt}
         negRatings={contribution.negRatings}
         number={contribution.number}
         posRatings={contribution.posRatings}
-        reference={contribution.ref}>
-        {contribution.content}
-      </Contribution>
+        reference={contribution.ref}
+      />
     ))}
   </Fragment>
 );
 
 ContributionList.propTypes = {
-  contributions: PropTypes.arrayOf(Contribution),
+  contributions: PropTypes.arrayOf(PropTypes.shape(Contribution.propTypes)).isRequired,
 };
 
 export default ContributionList;

@@ -46,7 +46,7 @@ DatasetSettings.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
 };
 
 export default DatasetSettings;
