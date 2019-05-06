@@ -1,12 +1,18 @@
 import React, { Fragment } from 'react';
 
-import { SETTINGS_DATASET_NAME } from '../constants/settings';
+import {
+  SETTINGS_DATASET_NAME,
+  SETTINGS_DATASET_NAME_DEFAULT,
+} from '../constants/settings';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useRest } from '../hooks/useRest';
 import ContributionList from './ContributionList';
 
 const AnalyticsPage = () => {
-  const [datasetName] = useLocalStorage(SETTINGS_DATASET_NAME);
+  const [datasetName] = useLocalStorage(
+    SETTINGS_DATASET_NAME,
+    SETTINGS_DATASET_NAME_DEFAULT,
+  );
   const { data: contributions, hasError, isLoading } = useRest(
     `http://localhost:4010/datasets/${datasetName}/contributions`,
     [],
