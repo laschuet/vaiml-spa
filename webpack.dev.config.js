@@ -21,6 +21,9 @@ const config = {
     publicPath: '/dev/',
   },
   resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
     extensions: ['.css', '.js', '.jsx', '.scss'],
     modules: [paths.source, paths.nodeModules],
   },

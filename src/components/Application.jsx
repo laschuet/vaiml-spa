@@ -1,5 +1,6 @@
 import Octicon, { Smiley } from '@githubprimer/octicons-react';
 import React, { Fragment } from 'react';
+import { hot } from 'react-hot-loader/root';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 
 import AnalyticsPage from './AnalyticsPage';
@@ -39,4 +40,4 @@ const Application = () => {
   );
 };
 
-export default Application;
+export default hot(Application);

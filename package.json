@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@githubprimer/octicons-react": "^8.5.0",
+    "@hot-loader/react-dom": "16.8.6",
     "@primer/css": "^12.4.0",
     "axios": "^0.19.0",
     "camelcase-keys": "^6.0.0",
