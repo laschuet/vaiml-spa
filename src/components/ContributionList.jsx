@@ -25,7 +25,8 @@ const ContributionList = props => (
 );
 
 ContributionList.propTypes = {
-  contributions: PropTypes.arrayOf(PropTypes.shape(Contribution.propTypes)).isRequired,
+  contributions: PropTypes.arrayOf(PropTypes.shape(Contribution.propTypes))
+    .isRequired,
 };
 
 export default ContributionList;
