@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import {
   SETTINGS_DATASET_NAME,
@@ -22,6 +23,11 @@ const AnalyticsPage = () => {
     <Fragment>
       <h1>Analytics</h1>
       {hasError && <div>Oops! An error occured...</div>}
+      {datasetName === '' && (
+        <div>
+          No dataset set. Go to <NavLink to="/settings">settings</NavLink>.
+        </div>
+      )}
       {isLoading ? (
         <div>Loading...</div>
       ) : (
