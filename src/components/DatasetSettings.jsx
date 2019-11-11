@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
-  SETTINGS_DATASET_NAME,
-  SETTINGS_DATASET_NAME_DEFAULT,
+  SETTINGS_DATASET_NAME_KEY,
+  SETTINGS_DATASET_NAME_VALUE_DEFAULT,
 } from '../constants/settings';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const DatasetSettings = props => {
   const [datasetName, setDatasetName] = useLocalStorage(
-    SETTINGS_DATASET_NAME,
-    SETTINGS_DATASET_NAME_DEFAULT,
+    SETTINGS_DATASET_NAME_KEY,
+    SETTINGS_DATASET_NAME_VALUE_DEFAULT,
   );
 
   const handleChange = evt => {
@@ -31,6 +31,9 @@ const DatasetSettings = props => {
             onBlur={handleChange}
             onChange={handleChange}
             value={datasetName}>
+            <option value={SETTINGS_DATASET_NAME_VALUE_DEFAULT}>
+              {SETTINGS_DATASET_NAME_VALUE_DEFAULT}
+            </option>
             {props.datasets.map(dataset => {
               return (
                 <option key={dataset.id} value={dataset.name}>
