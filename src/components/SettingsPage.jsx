@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 import { useRest } from '../hooks/useRest';
 import DatasetSettings from './DatasetSettings';
+import Error from './Error';
 
 const SettingsPage = () => {
   const { data: datasets, hasError, isLoading } = useRest(
@@ -14,7 +15,7 @@ const SettingsPage = () => {
       <h1>Settings</h1>
       <div className="clearfix gutter-condensed">
         <div className="col-12 float-left">
-          {hasError && <div>Oops! An error occured...</div>}
+          {hasError && <Error />}
           {isLoading ? (
             <div>Loading...</div>
           ) : (

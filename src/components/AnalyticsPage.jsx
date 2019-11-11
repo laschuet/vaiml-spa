@@ -8,6 +8,7 @@ import {
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useRest } from '../hooks/useRest';
 import ContributionList from './ContributionList';
+import Error from './Error';
 
 const AnalyticsPage = () => {
   const [datasetName] = useLocalStorage(
@@ -22,7 +23,7 @@ const AnalyticsPage = () => {
   return (
     <Fragment>
       <h1>Analytics</h1>
-      {hasError && <div>Oops! An error occured...</div>}
+      {hasError && <Error />}
       {datasetName === '' && (
         <div>
           No dataset set. Go to <NavLink to="/settings">settings</NavLink>.
