@@ -1,7 +1,9 @@
 import React from 'react';
 
 const ChildProcessTest = () => {
-  const handleRun = evt => {};
+  const handleSubmit = evt => {
+    evt.preventDefault();
+  };
 
   return (
     <div className="Box Box--condensed">
@@ -13,7 +15,7 @@ const ChildProcessTest = () => {
         <div />
       </div>
       <div className="Box-footer clearfix">
-        <button className="btn btn-primary float-right" onClick={handleRun}>
+        <button className="btn btn-primary float-right" onClick={handleSubmit}>
           Run
         </button>
       </div>
