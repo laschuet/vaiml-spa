@@ -7,7 +7,7 @@ import {
 } from '../constants/settings';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
-const DatasetSettings = props => {
+const DatasetSettings = ({ datasets }) => {
   const [datasetName, setDatasetName] = useLocalStorage(
     SETTINGS_DATASET_NAME_KEY,
     SETTINGS_DATASET_NAME_VALUE_DEFAULT,
@@ -34,13 +34,9 @@ const DatasetSettings = props => {
             <option value={SETTINGS_DATASET_NAME_VALUE_DEFAULT}>
               {SETTINGS_DATASET_NAME_VALUE_DEFAULT}
             </option>
-            {props.datasets.map(dataset => {
-              return (
-                <option key={dataset.id} value={dataset.name}>
-                  {dataset.name}
-                </option>
-              );
-            })}
+            {datasets.map(({ id, name }) => (
+                <option key={id} value={name}>{name}</option>
+            ))}
           </select>
         </dd>
       </dl>

@@ -3,22 +3,34 @@ import React, { Fragment } from 'react';
 
 import Contribution from './Contribution';
 
-const ContributionList = props => (
+const ContributionList = ({ contributions }) => (
   <Fragment>
-    {props.contributions.map(contribution => (
+    {contributions.map(({
+      id,
+      assessmentContent,
+      assessmentDecision,
+      author,
+      content,
+      createdAt,
+      modifiedAt,
+      negRatings,
+      number,
+      posRatings,
+      ref,
+    }) => (
       <Contribution
-        key={contribution.id}
-        assessmentContent={contribution.assessmentContent}
-        assessmentDecision={contribution.assessmentDecision}
-        author={contribution.author}
-        content={contribution.content}
-        createdAt={contribution.createdAt}
-        id={contribution.id}
-        modifiedAt={contribution.modifiedAt}
-        negRatings={contribution.negRatings}
-        number={contribution.number}
-        posRatings={contribution.posRatings}
-        reference={contribution.ref}
+        key={id}
+        assessmentContent={assessmentContent}
+        assessmentDecision={assessmentDecision}
+        author={author}
+        content={content}
+        createdAt={createdAt}
+        id={id}
+        modifiedAt={modifiedAt}
+        negRatings={negRatings}
+        number={number}
+        posRatings={posRatings}
+        reference={ref}
       />
     ))}
   </Fragment>

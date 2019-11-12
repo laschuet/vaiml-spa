@@ -5,26 +5,38 @@ import RelativeTime from './RelativeTime';
 
 import '../stylesheets/contribution';
 
-const Contribution = props => (
+const Contribution = ({
+  assessmentContent = '',
+  assessmentDecision = false,
+  author,
+  content,
+  createdAt = '',
+  id,
+  modifiedAt = '',
+  negRatings = 0,
+  number = 0,
+  posRatings = 0,
+  reference = '',
+}) => (
   <div className="Box Box--condensed mb-2">
     <div className="Box-header clearfix">
       <div className="float-left">
         <strong
           className="css-truncate css-truncate-target"
-          title={props.author}>
-          {props.author}
+          title={author}>
+          {author}
         </strong>
-        {props.createdAt && (
+        {createdAt && (
           <Fragment>
             {' '}
-            &middot; <RelativeTime datetime={props.createdAt} />
+            &middot; <RelativeTime datetime={createdAt} />
           </Fragment>
         )}
       </div>
       <button className="btn btn-link btn-sm float-right">Do 3</button>
     </div>
     <div className="Box-body">
-      <div className="mb-2 content">{props.content}</div>
+      <div className="mb-2 content">{content}</div>
       <div>
         <button className="btn btn-primary btn-sm">Do 1</button>{' '}
         <button className="btn btn-sm">Do 2</button>
