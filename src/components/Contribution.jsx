@@ -21,9 +21,7 @@ const Contribution = ({
   <div className="Box Box--condensed mb-2">
     <div className="Box-header clearfix">
       <div className="float-left">
-        <strong
-          className="css-truncate css-truncate-target"
-          title={author}>
+        <strong className="css-truncate css-truncate-target" title={author}>
           {author}
         </strong>
         {createdAt && (

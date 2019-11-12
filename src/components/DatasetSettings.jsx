@@ -35,7 +35,9 @@ const DatasetSettings = ({ datasets }) => {
               {SETTINGS_DATASET_NAME_VALUE_DEFAULT}
             </option>
             {datasets.map(({ id, name }) => (
-                <option key={id} value={name}>{name}</option>
+              <option key={id} value={name}>
+                {name}
+              </option>
             ))}
           </select>
         </dd>
