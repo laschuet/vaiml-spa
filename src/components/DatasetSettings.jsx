@@ -51,6 +51,7 @@ const DatasetSettings = props => {
 DatasetSettings.propTypes = {
   datasets: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     }),
   ).isRequired,
