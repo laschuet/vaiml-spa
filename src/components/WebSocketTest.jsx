@@ -12,7 +12,7 @@ const WebSocketTest = () => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    sendMessage(JSON.stringify(input));
+    sendMessage(input);
     setInput('');
   };
 
