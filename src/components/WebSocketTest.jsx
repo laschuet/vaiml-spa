@@ -37,7 +37,10 @@ const WebSocketTest = () => {
               placeholder="Message"
             />
             <span className="input-group-button">
-              <button className="btn btn-primary" onClick={handleSubmit}>
+              <button
+                className="btn btn-primary"
+                type="submit"
+                onClick={handleSubmit}>
                 Send
               </button>
             </span>
