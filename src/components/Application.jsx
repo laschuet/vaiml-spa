@@ -1,4 +1,4 @@
-import Octicon, { Smiley } from '@githubprimer/octicons-react';
+import Octicon, { Smiley } from '@primer/octicons-react';
 import React, { Fragment } from 'react';
 import { hot } from 'react-hot-loader/root';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
