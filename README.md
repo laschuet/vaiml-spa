@@ -1,9 +1,9 @@
-# vaiml-spa
+# vaipp-spa
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laschuet/vaiml-spa/blob/master/LICENSE.txt)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laschuet/vaipp-spa/blob/master/LICENSE.txt)
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
-Visual analytics for interpretable machine learning - Single page application.
+Visual analytics in participatory processes - Single page application.
 
 ## Requirements
 
@@ -49,4 +49,4 @@ Run prettier including fixes.
 
 ## License
 
-vaiml-spa is licensed under the [MIT License](./LICENSE.txt).
+vaipp-spa is licensed under the [MIT License](./LICENSE.txt).

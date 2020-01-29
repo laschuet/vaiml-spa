@@ -1,7 +1,7 @@
 {
-  "name": "vaiml-spa",
+  "name": "vaipp-spa",
   "version": "1.0.0",
-  "description": "Visual analytics for interpretable machine learning - Single page application",
+  "description": "Visual analytics in participatory processes - Single page application",
   "author": "Lars Schütz (https://github.com/laschuet)",
   "license": "MIT",
   "private": true,
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/laschuet/vaiml-spa.git"
+    "url": "https://github.com/laschuet/vaipp-spa.git"
   },
   "bugs": {
-    "url": "https://github.com/laschuet/vaiml-spa/issues"
+    "url": "https://github.com/laschuet/vaipp-spa/issues"
   },
-  "homepage": "https://github.com/laschuet/vaiml-spa",
+  "homepage": "https://github.com/laschuet/vaipp-spa",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.7.0",
