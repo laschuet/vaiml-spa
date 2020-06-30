@@ -1,4 +1,4 @@
-import Octicon, { Smiley } from '@primer/octicons-react';
+import { SmileyIcon } from '@primer/octicons-react';
 import React, { Fragment } from 'react';
 import { hot } from 'react-hot-loader/root';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
@@ -15,7 +15,7 @@ const Application = () => {
         <header className="p-2 bg-gray-dark">
           <section>
             <NavLink className="mr-2 text-white" to="/" exact>
-              <Octicon icon={Smiley} />
+              <SmileyIcon />
               <span className="ml-2">VAIML</span>
             </NavLink>
             <NavLink className="mr-2 text-white" to="/analytics">
