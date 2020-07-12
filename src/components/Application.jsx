@@ -1,7 +1,7 @@
 import { SmileyIcon } from '@primer/octicons-react';
 import React, { Fragment } from 'react';
 import { hot } from 'react-hot-loader/root';
-import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route, Routes } from 'react-router-dom';
 
 import AnalyticsPage from './AnalyticsPage';
 import HomePage from './HomePage';
@@ -14,7 +14,7 @@ const Application = () => {
       <Fragment>
         <header className="p-2 bg-gray-dark">
           <section>
-            <NavLink className="mr-2 text-white" to="/" exact>
+            <NavLink className="mr-2 text-white" to="/">
               <SmileyIcon />
               <span className="ml-2">VAIML</span>
             </NavLink>
@@ -30,10 +30,12 @@ const Application = () => {
           </section>
         </header>
         <div className="p-2">
-          <Route path="/" exact component={HomePage} />
-          <Route path="/analytics" component={AnalyticsPage} />
-          <Route path="/settings" component={SettingsPage} />
-          <Route path="/tests" component={TestPage} />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/analytics" element={<AnalyticsPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/tests" element={<TestPage />} />
+          </Routes>
         </div>
       </Fragment>
     </Router>
